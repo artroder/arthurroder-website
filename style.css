@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("abstract-network.jpeg") center / cover no-repeat;
+    url("/img/abstract-network.jpeg") center / cover no-repeat;
   color: #fff;
   display: flex;
   flex-direction: column;
