@@ -92,5 +92,36 @@
   <p>© 2026 Arthur Roder</p>
 </footer>
 
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.checked = false;
+    });
+  });
+</script>
+
+<script>
+  const nav = document.querySelector('.nav');
+  const servicesSection = document.querySelector('#Services');
+
+  if (servicesSection) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        nav.classList.toggle('scrolled', !entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: '-72px 0px 0px 0px' // height of nav
+      }
+    );
+
+    observer.observe(servicesSection);
+  }
+</script>
+
 </body>
 </html>
