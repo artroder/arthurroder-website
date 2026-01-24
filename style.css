@@ -56,7 +56,7 @@ body {
   font-weight: 600;
   text-decoration: none;
   color: #fff;
-  padding-right: 3rem;
+  padding-right: 4rem;
 }
 
 .nav-links {
@@ -185,13 +185,49 @@ body {
 }
 
 /* ------------------
-    WORKED WITH
+   HOW I WORK
 ------------------ */
-.worked-with {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+
+#How-I-Work {
+  max-width: 1100px;
+  margin: 0 auto;
 }
+
+#How-I-Work .section-intro {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.how-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.how-step img {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.how-step-content {
+  max-width: 560px;
+}
+
+/* Alternate layout */
+.how-step:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.how-step:nth-child(even) .how-step-content {
+  text-align: right;
+}
+
+
 
 /* ------------------
    FOOTER
@@ -231,5 +267,21 @@ body {
 
   .nav-toggle:checked + .nav-burger + .nav-links {
     display: flex;
+  }
+
+  .how-step {
+    flex-direction: column;
+    text-align: left;
+    gap: 1.25rem;
+  }
+
+  .how-step:nth-child(even) {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .how-step img {
+    width: 56px;
+    height: 56px;
   }
 }
