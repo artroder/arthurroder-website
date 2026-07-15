@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Arthur Roder – Search Engine Optimization Specialist</title>
   <meta name="description" content="Arthur Roder is a seasoned and all-round SEO professional, well versed in GEO strategies and data analysis automation. With 6 years of experience in search and content marketing, Arthur has a record of successful projects.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 
 <body>
@@ -40,12 +41,16 @@
     </a>
   </div>
 
-  <img
-    class="hero-divider"
-    src="/img/gsc-growth-curve-thin.png"
-    alt="google search console blue Clicks metric curve in ascension due to successful strategic SEO work"
-    aria-hidden="true"
-  >
+  <picture>
+    <source srcset="/img/gsc-growth-curve-thin.avif" type="image/avif">
+    <img
+      class="hero-divider"
+      src="/img/gsc-growth-curve-thin.png"
+      alt="google search console blue Clicks metric curve in ascension due to successful strategic SEO work"
+      aria-hidden="true"
+      fetchpriority="high"
+    >
+  </picture>
 </header>
 
 <main>
