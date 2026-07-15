@@ -168,7 +168,7 @@ body {
    SERVICES
 ------------------ */
 .services-showcase {
-  background: linear-gradient(160deg, #ffffff 0%, #f2f4f8 100%);
+  background: linear-gradient(160deg, #ffffff 0%, #f4f6fa 100%);
   color: #0D2058;
 }
 
@@ -262,44 +262,116 @@ body {
 /* ------------------
    HOW I WORK
 ------------------ */
-
-#How-I-Work {
+.thought-process {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-#How-I-Work .section-intro {
+.thought-process .section-intro {
   max-width: 720px;
   margin: 0 auto 4rem;
   text-align: center;
 }
 
-.how-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 3rem;
-  margin-bottom: 4.5rem;
+.thought-line {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
-.how-step img {
-  width: 96px;
-  height: 96px;
-  flex-shrink: 0;
-  opacity: 0.9;
+.thought-line::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg,
+    rgba(147, 197, 253, 0.15),
+    rgba(59, 130, 246, 0.55) 12%,
+    rgba(59, 130, 246, 0.55) 88%,
+    rgba(147, 197, 253, 0.15)
+  );
+  transform: translateX(-50%);
 }
 
-.how-step-content {
-  max-width: 560px;
+.thought-step {
+  position: relative;
+  width: 50%;
+  padding-bottom: 4rem;
+  text-align: left;
 }
 
-/* Alternate layout */
-.how-step:nth-child(even) {
-  flex-direction: row-reverse;
-  margin-left: auto;
+.thought-step:last-child {
+  padding-bottom: 0;
 }
 
-.how-step:nth-child(even) .how-step-content {
+.thought-step:nth-child(odd) {
+  padding-right: 3.5rem;
   text-align: right;
+}
+
+.thought-step:nth-child(even) {
+  margin-left: 50%;
+  padding-left: 3.5rem;
+}
+
+.thought-marker {
+  position: absolute;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #3b82f6;
+  color: #0D2058;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.thought-marker svg {
+  width: 20px;
+  height: 20px;
+}
+
+.thought-step:nth-child(odd) .thought-marker {
+  right: -22px;
+}
+
+.thought-step:nth-child(even) .thought-marker {
+  left: -22px;
+}
+
+.thought-content h3 {
+  margin: 0 0 0.5rem;
+  color: #0D2058;
+  font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+}
+
+.thought-content p {
+  color: #444;
+  margin: 0;
+}
+
+.thought-edge {
+  max-width: 760px;
+  margin: 4.5rem auto 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #3b82f6;
+  text-align: left;
+}
+
+.thought-edge h3 {
+  margin: 0 0 0.75rem;
+  color: #0D2058;
+  font-size: 1.4rem;
+}
+
+.thought-edge p {
+  color: #333;
+  margin: 0;
 }
 
 
@@ -344,25 +416,33 @@ body {
     display: flex;
   }
 
-  .how-step {
-    flex-direction: column;
-    text-align: left;
-    gap: 1.25rem;
-  }
-
-  .how-step:nth-child(even) {
-    flex-direction: column;
-    margin-left: 0;
-  }
-
-  .how-step img {
-    width: 56px;
-    height: 56px;
-  }
-
   .service-feature,
   .service-feature.reverse {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .thought-line::before {
+    left: 21px;
+  }
+
+  .thought-step,
+  .thought-step:nth-child(odd),
+  .thought-step:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 3.25rem;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .thought-step:nth-child(odd) .thought-marker,
+  .thought-step:nth-child(even) .thought-marker {
+    left: 0;
+    right: auto;
+  }
+
+  .thought-edge {
+    padding-left: 1.25rem;
   }
 }
