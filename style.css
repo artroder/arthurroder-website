@@ -379,11 +379,17 @@ body {
 ------------------ */
 .trust-section {
   background: #f4f6fa;
-  border-radius: 0 0 3rem 3rem;
+  border-radius: 3rem;
 }
 
 .trust-section h2 {
   color: #0D2058;
+}
+
+.trust-section > p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .credibility-strip {
