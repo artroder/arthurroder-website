@@ -33,8 +33,6 @@ body {
     linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
     url("/img/abstract-network.jpeg") center / cover no-repeat;
   color: #fff;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   scroll-margin-top: 80px;
 }
@@ -99,15 +97,17 @@ body {
    HERO CONTENT
 ------------------ */
 .hero-body {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
   z-index: 3;
-  flex: 1;
   display: flex;
   align-items: center;
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem 0;
+  padding: 0 1.5rem;
 }
 
 .hero-content {
@@ -118,7 +118,7 @@ body {
 .hero-portrait {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: max(1.5rem, calc((100% - 1200px) / 2 + 1.5rem));
   z-index: 1;
   width: clamp(200px, 26vw, 380px);
 }
@@ -790,7 +790,8 @@ body {
   }
 
   .hero-body {
-    align-items: flex-start;
+    top: 6rem;
+    transform: none;
   }
 
   .hero-portrait {
