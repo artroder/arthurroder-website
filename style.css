@@ -112,7 +112,7 @@ body {
 }
 
 .hero-content {
-  max-width: 560px;
+  max-width: clamp(340px, calc(340px + 220 * (100vw - 768px) / 432), 560px);
   text-align: left;
 }
 
@@ -121,7 +121,7 @@ body {
   bottom: 0;
   right: max(1.5rem, calc((100% - 1200px) / 2 + 1.5rem));
   z-index: 1;
-  width: clamp(260px, 36vw, 520px);
+  width: clamp(260px, calc(260px + 260 * (100vw - 768px) / 432), 520px);
 }
 
 .hero-portrait img {
@@ -132,12 +132,12 @@ body {
 
 .eyebrow {
   font-weight: 500;
-  font-size: clamp(0.95rem, 1vw, 1.1rem);
+  font-size: clamp(0.95rem, calc(0.95rem + 2.4 * (100vw - 768px) / 432), 1.1rem);
   margin-bottom: 0.5rem;
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 6vw, 4rem);
+  font-size: clamp(3rem, calc(3rem + 16 * (100vw - 768px) / 432), 4rem);
   font-weight: 600;
   line-height: 1.1;
   margin: 0.5rem 0 1rem;
