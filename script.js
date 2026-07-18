@@ -11,8 +11,11 @@ const emailForm = document.getElementById('email-form');
 if (emailForm) {
   emailForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(document.getElementById('contact-subject').value);
-    const body = encodeURIComponent(document.getElementById('contact-message').value);
+    const name = document.getElementById('contact-name').value;
+    const email = document.getElementById('contact-email').value;
+    const message = document.getElementById('contact-message').value;
+    const subject = encodeURIComponent('📧 Contact from Website');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
     window.location.href = `mailto:arthurleaoroder@gmail.com?subject=${subject}&body=${body}`;
   });
 }
