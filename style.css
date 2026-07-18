@@ -46,6 +46,17 @@ p {
 }
 
 /* ------------------
+   SITE HEADER (non-hero pages)
+------------------ */
+.site-header {
+  background: linear-gradient(135deg, #0D2058, #071233);
+}
+
+.site-header .nav {
+  padding: 1.5rem;
+}
+
+/* ------------------
    NAVIGATION
 ------------------ */
 .nav {
@@ -79,6 +90,66 @@ p {
   color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.nav-dropdown-label::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  margin: 0.75rem 0 0;
+  padding: 0.5rem;
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(13, 32, 88, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  color: #0D2058;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #f4f6fa;
 }
 
 /* Burger toggle (base) */
@@ -250,6 +321,7 @@ p {
   scroll-margin-top: 90px;
 }
 
+.section h1,
 .section h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 0.5rem;
@@ -825,6 +897,29 @@ p {
 
   .nav-toggle:checked + .nav-burger + .nav-links {
     display: flex;
+  }
+
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    margin-top: 0.75rem;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    text-align: center;
+  }
+
+  .nav-dropdown-menu a {
+    color: #fff;
+    padding: 0.4rem 0;
   }
 
   .thought-line::before {
