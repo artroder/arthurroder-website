@@ -35,7 +35,7 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
   scroll-margin-top: 80px;
 }
 
@@ -43,6 +43,8 @@ body {
    NAVIGATION
 ------------------ */
 .nav {
+  position: relative;
+  z-index: 3;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem 1.5rem 0;
@@ -96,11 +98,35 @@ body {
 /* ------------------
    HERO CONTENT
 ------------------ */
-.hero-content {
-  max-width: 650px;
+.hero-body {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
-  text-align: center;
+  padding: 2rem 1.5rem 0;
+}
+
+.hero-content {
+  max-width: 560px;
+  text-align: left;
+}
+
+.hero-portrait {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: clamp(200px, 26vw, 380px);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .eyebrow {
@@ -127,7 +153,7 @@ body {
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -189,6 +215,14 @@ body {
 /* ------------------
    DIVIDER IMAGE
 ------------------ */
+.hero-divider-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
 .hero-divider {
   display: block;
   width: 100%;
@@ -581,7 +615,7 @@ body {
 .who-i-am-photo-main img {
   width: 100%;
   display: block;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
@@ -753,6 +787,17 @@ body {
 
   .nav-burger {
     display: flex;
+  }
+
+  .hero-body {
+    align-items: flex-start;
+  }
+
+  .hero-portrait {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: clamp(150px, 48vw, 220px);
   }
 
   .nav-links {
