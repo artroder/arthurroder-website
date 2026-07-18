@@ -899,6 +899,214 @@ p {
 }
 
 /* ------------------
+   LANDING PAGE HERO
+------------------ */
+.landing-hero {
+  background: linear-gradient(160deg, #0D2058 0%, #071233 100%);
+  color: #fff;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.landing-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.landing-hero-content {
+  flex: 1 1 55%;
+  text-align: left;
+}
+
+.landing-hero .eyebrow-alt {
+  color: var(--light-warm);
+}
+
+.landing-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0.5rem 0 1rem;
+  color: #fff;
+}
+
+.landing-hero-subtitle {
+  color: #e0e0e0;
+  max-width: 560px;
+  margin: 0 0 2rem;
+}
+
+.landing-hero-media {
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+
+.landing-hero-media img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ------------------
+   DEFINITION BOX
+------------------ */
+.definition-box {
+  background: #eef4ff;
+  border-left: 4px solid #3b82f6;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  max-width: 720px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.definition-box p {
+  margin: 0;
+  color: #0D2058;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ------------------
+   LANDING TESTIMONIALS (alt layout)
+------------------ */
+.landing-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  text-align: left;
+}
+
+.landing-testimonial {
+  background: #f4f6fa;
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.landing-testimonial-mark {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.landing-testimonial .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: #0D2058;
+  margin: 0 0 0.75rem;
+}
+
+.landing-testimonial figcaption a {
+  color: #a04000;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.landing-testimonial figcaption a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------
+   DISCOVERY FORM
+------------------ */
+.discovery-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+
+.discovery-form .field-full {
+  grid-column: 1 / -1;
+}
+
+.discovery-form label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #0D2058;
+  margin-bottom: 0.35rem;
+}
+
+.discovery-form input,
+.discovery-form select,
+.discovery-form textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid rgba(13, 32, 88, 0.25);
+  border-radius: 8px;
+  background: #fff;
+  resize: vertical;
+}
+
+.discovery-form input:focus,
+.discovery-form select:focus,
+.discovery-form textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+  border-color: #3b82f6;
+}
+
+/* ------------------
+   FAQ ACCORDION
+------------------ */
+.faq-list {
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(13, 32, 88, 0.12);
+  padding: 1.25rem 0;
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #0D2058;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: '\2212';
+}
+
+.faq-item p {
+  margin: 0.75rem 0 0;
+  color: #444;
+}
+
+/* ------------------
    FOOTER
 ------------------ */
 .footer {
@@ -1033,5 +1241,22 @@ p {
   .contact-intro-media {
     flex-direction: column;
     text-align: center;
+  }
+
+  .landing-hero-inner {
+    flex-direction: column;
+  }
+
+  .landing-hero-media {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .landing-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discovery-form {
+    grid-template-columns: 1fr;
   }
 }

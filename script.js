@@ -19,3 +19,23 @@ if (emailForm) {
     window.location.href = `mailto:arthurleaoroder@gmail.com?subject=${subject}&body=${body}`;
   });
 }
+
+const discoveryForm = document.getElementById('discovery-form');
+if (discoveryForm) {
+  discoveryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const get = (id) => document.getElementById(id).value;
+    const subject = encodeURIComponent('🌍 Discovery call request — International SEO');
+    const body = encodeURIComponent(
+      `Name: ${get('discovery-name')}\n` +
+      `Email: ${get('discovery-email')}\n` +
+      `Company: ${get('discovery-company')}\n` +
+      `Website: ${get('discovery-website')}\n` +
+      `Current markets: ${get('discovery-current-markets')}\n` +
+      `Target markets: ${get('discovery-target-markets')}\n` +
+      `Timeline: ${get('discovery-timeline')}\n\n` +
+      `${get('discovery-challenge')}`
+    );
+    window.location.href = `mailto:arthurleaoroder@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
