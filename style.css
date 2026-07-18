@@ -237,6 +237,14 @@ p {
   gap: 1rem;
 }
 
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
 .cta {
   display: inline-block;
   padding: 0.6rem 1.5rem;
@@ -662,7 +670,7 @@ p {
 
 .who-i-am-grid {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 4rem;
   text-align: left;
   margin-top: 3rem;
@@ -670,6 +678,7 @@ p {
 
 .who-i-am-media {
   position: relative;
+  display: flex;
   flex: 0 0 46%;
   max-width: 440px;
 }
@@ -689,14 +698,15 @@ p {
 .who-i-am-photo-main {
   position: relative;
   z-index: 1;
+  flex: 1;
   border-radius: 20px;
   overflow: hidden;
 }
 
 .who-i-am-photo-main img {
   width: 100%;
+  height: 100%;
   display: block;
-  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
@@ -714,6 +724,7 @@ p {
 
 .who-i-am-photo-secondary img {
   width: 100%;
+  height: auto;
   display: block;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -778,16 +789,12 @@ p {
 }
 
 .contact-options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 3rem;
+  max-width: 880px;
+  margin: 0 auto;
   text-align: left;
-}
-
-.contact-option {
-  flex: 1 1 260px;
-  max-width: 320px;
 }
 
 .contact-icon svg {
@@ -845,6 +852,50 @@ p {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.contact-intro-media {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-intro-media img {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-intro-media p {
+  margin: 0;
+  color: #333;
+}
+
+.contact-photo-break {
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-photo-break img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-photo-break p {
+  color: #444;
+  margin: 0;
 }
 
 /* ------------------
@@ -970,7 +1021,17 @@ p {
     margin: 0 auto;
   }
 
+  .who-i-am-photo-main img {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
   .contact-options {
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-intro-media {
+    flex-direction: column;
+    text-align: center;
   }
 }
