@@ -144,6 +144,48 @@ body {
   cursor: pointer;
 }
 
+.cta-secondary {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--light-warm), var(--dark-warm)) border-box;
+  border: 2px solid transparent;
+  color: #0D2058;
+}
+
+.cta-blue {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
+
+/* ------------------
+   SHARED UI
+------------------ */
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.accent-callout {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #3b82f6;
+  text-align: left;
+}
+
+.accent-callout h3 {
+  margin: 0 0 0.75rem;
+  color: #0D2058;
+  font-size: 1.4rem;
+}
+
+.accent-callout p {
+  color: #333;
+  margin: 0 0 1rem;
+}
+
 /* ------------------
    DIVIDER IMAGE
 ------------------ */
@@ -168,6 +210,7 @@ body {
 .section h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 0.5rem;
+  color: #0D2058;
 }
 
 .section-intro {
@@ -196,69 +239,33 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.services-showcase h2 {
-  color: #0D2058;
-}
-
 .services-showcase .section-intro {
   color: #444;
   max-width: 700px;
   margin: 0 auto 4rem;
 }
 
-.service-feature {
+.services-byline {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 1.25rem;
+  max-width: 640px;
+  margin: 0 auto 1rem;
   text-align: left;
-  padding: 3rem 0;
 }
 
-.service-feature + .service-feature {
-  border-top: 1px solid rgba(13, 32, 88, 0.12);
-}
-
-.service-feature.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-feature-media {
-  flex: 1 1 45%;
-}
-
-.service-feature-media img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-}
-
-.service-feature-text {
-  flex: 1 1 55%;
-}
-
-.service-index {
-  display: block;
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #d35400, #0D2058);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.service-feature-text h3 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin: 0 0 1rem;
-  color: #0D2058;
-}
-
-.service-feature-text p {
-  color: #333;
-  max-width: 520px;
+.services-byline p {
   margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.solution-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #3b82f6;
+  margin-bottom: 0.75rem;
+  display: block;
 }
 
 .services-closing {
@@ -363,25 +370,6 @@ body {
 
 .thought-content p {
   color: #444;
-  margin: 0;
-}
-
-.thought-edge {
-  max-width: 760px;
-  margin: 4.5rem auto 0;
-  padding-left: 1.5rem;
-  border-left: 3px solid #3b82f6;
-  text-align: left;
-}
-
-.thought-edge h3 {
-  margin: 0 0 0.75rem;
-  color: #0D2058;
-  font-size: 1.4rem;
-}
-
-.thought-edge p {
-  color: #333;
   margin: 0;
 }
 
@@ -542,6 +530,13 @@ body {
   text-decoration: underline;
 }
 
+.profile-avatars {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
 /* ------------------
    WHO I AM
 ------------------ */
@@ -553,15 +548,15 @@ body {
 .who-i-am-grid {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
   text-align: left;
   margin-top: 3rem;
 }
 
 .who-i-am-media {
   position: relative;
-  flex: 0 0 38%;
-  max-width: 340px;
+  flex: 0 0 46%;
+  max-width: 440px;
 }
 
 .who-i-am-media::before {
@@ -586,14 +581,14 @@ body {
 .who-i-am-photo-main img {
   width: 100%;
   display: block;
-  aspect-ratio: 7 / 9;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
 .who-i-am-photo-secondary {
   position: absolute;
   z-index: 2;
-  width: 48%;
+  width: 42%;
   right: -1.5rem;
   bottom: -1.5rem;
   border: 4px solid #fff;
@@ -624,7 +619,7 @@ body {
 
 .who-i-am-content p {
   color: #333;
-  max-width: 640px;
+  max-width: 580px;
   margin: 0 0 1.25rem;
 }
 
@@ -777,12 +772,6 @@ body {
     display: flex;
   }
 
-  .service-feature,
-  .service-feature.reverse {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
   .thought-line::before {
     left: 21px;
   }
@@ -803,7 +792,7 @@ body {
     right: auto;
   }
 
-  .thought-edge {
+  .accent-callout {
     padding-left: 1.25rem;
   }
 
@@ -827,7 +816,7 @@ body {
   }
 
   .who-i-am-media {
-    max-width: 280px;
+    max-width: 320px;
     margin: 0 auto;
   }
 
