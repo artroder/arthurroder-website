@@ -902,7 +902,15 @@ p {
    LANDING PAGE HERO
 ------------------ */
 .landing-hero {
-  background: linear-gradient(160deg, #0D2058 0%, #071233 100%);
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("/img/world-at-night-for-international-seo.jpg") center / cover no-repeat;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    image-set(
+      url("/img/world-at-night-for-international-seo.avif") type("image/avif"),
+      url("/img/world-at-night-for-international-seo.jpg") type("image/jpeg")
+    ) center / cover no-repeat;
   color: #fff;
   padding: 4rem 1.5rem 5rem;
 }
@@ -943,11 +951,9 @@ p {
   max-width: 320px;
 }
 
-.landing-hero-media img {
+.landing-hero-illustration {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 20px;
+  height: auto;
   display: block;
 }
 
