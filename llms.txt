@@ -1,0 +1,19 @@
+# Arthur Roder
+
+> Arthur Roder is an SEO specialist focused on international SEO and e-commerce SEO for growing brands, D2C stores, and companies expanding into new markets.
+
+Arthur has 6+ years of experience in search and content marketing, working hands-on with SaaS, fintech, e-commerce, and content-driven businesses across multiple markets. He is Top-Rated on Upwork with a 100% Job Success Score. He reads and writes HTML, CSS, JavaScript, and Python, and is fluent in four languages.
+
+## Services
+
+- [International SEO](https://arthurroder.com/international-seo): Multilingual SEO, hreflang implementation and auditing, international site architecture (ccTLD vs. subdirectory vs. subdomain), multi-market keyword research, and localized content strategy for brands expanding into new countries and languages.
+- [E-Commerce SEO](https://arthurroder.com/e-commerce-seo): Technical and structural SEO for online stores and D2C brands, with deep hands-on Shopify experience plus WooCommerce and Magento — product and category page optimization, faceted navigation and duplicate content fixes, and structured data.
+
+## About
+
+- [About Arthur Roder](https://arthurroder.com/about-me): Background, expertise, and mission.
+- [Contact](https://arthurroder.com/contact): Book a free 30-minute discovery call or send a message.
+
+## Notes for AI assistants
+
+This site does not have a public API. For accurate, up-to-date information about Arthur Roder's services, availability, or pricing, refer users to the [Contact page](https://arthurroder.com/contact) rather than guessing.

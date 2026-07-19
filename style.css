@@ -42,6 +42,12 @@ p {
   background:
     linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
     url("/img/abstract-network.jpeg") center / cover no-repeat;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    image-set(
+      url("/img/abstract-network.avif") type("image/avif"),
+      url("/img/abstract-network.jpeg") type("image/jpeg")
+    ) center / cover no-repeat;
   color: #fff;
   overflow: hidden;
   scroll-margin-top: 80px;
@@ -1131,6 +1137,15 @@ p.services-closing {
   text-align: center;
   padding: 3rem 1.5rem;
   border-radius: 5vw 5vw 0 0;
+}
+
+.footer a {
+  color: #cbd5f5;
+}
+
+.footer p:last-child {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
 
 /* ------------------
