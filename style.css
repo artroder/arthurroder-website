@@ -332,8 +332,16 @@ p {
 .section h1,
 .section h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.15;
   margin-bottom: 0.5rem;
   color: #0D2058;
+}
+
+.section p {
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-intro {
@@ -353,13 +361,15 @@ p {
   text-align: center;
 }
 
-.eyebrow-alt {
+p.eyebrow-alt {
   color: #a04000;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
+  text-align: center;
+  max-width: none;
 }
 
 .services-showcase .section-intro {
@@ -391,7 +401,7 @@ p {
   display: block;
 }
 
-.services-closing {
+p.services-closing {
   text-align: center;
   max-width: 640px;
   margin: 4rem auto 0;
@@ -411,7 +421,6 @@ p {
 .thought-process .section-intro {
   max-width: 720px;
   margin: 0 auto 4rem;
-  text-align: center;
 }
 
 .thought-line {
@@ -628,6 +637,10 @@ p {
 .profile-links {
   text-align: center;
   margin-top: 4rem;
+}
+
+.profile-links p {
+  text-align: center;
 }
 
 .profile-links h3 {
@@ -880,6 +893,10 @@ p {
 .contact-photo-break {
   max-width: 320px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.contact-photo-break p {
   text-align: center;
 }
 
