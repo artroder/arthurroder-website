@@ -947,14 +947,25 @@ p {
 }
 
 .landing-hero-media {
+  position: relative;
   flex: 0 0 320px;
   max-width: 320px;
 }
 
-.landing-hero-illustration {
+.landing-hero-icon {
+  display: block;
+}
+
+.landing-hero-icon-globe {
   width: 100%;
   height: auto;
-  display: block;
+}
+
+.landing-hero-icon-search {
+  position: absolute;
+  width: 35%;
+  right: -5%;
+  bottom: -5%;
 }
 
 /* ------------------
