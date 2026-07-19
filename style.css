@@ -518,6 +518,10 @@ p.services-closing {
   color: #0D2058;
 }
 
+.trust-section .section-intro {
+  text-align: center;
+}
+
 .trust-section > p {
   max-width: 700px;
   margin-left: auto;
@@ -791,7 +795,6 @@ p.services-closing {
    CONTACT
 ------------------ */
 .contact-section .section-intro {
-  max-width: 650px;
   margin: 0 auto 1rem;
 }
 
@@ -942,6 +945,8 @@ p.services-closing {
 
 .landing-hero .eyebrow-alt {
   color: var(--light-warm);
+  text-align: left;
+  max-width: none;
 }
 
 .landing-hero h1 {
@@ -962,22 +967,23 @@ p.services-closing {
   position: relative;
   flex: 0 0 320px;
   max-width: 320px;
+  margin-top: -2.5rem;
 }
 
 .landing-hero-icon {
   display: block;
 }
 
-.landing-hero-icon-globe {
+.landing-hero-icon-primary {
   width: 100%;
   height: auto;
 }
 
-.landing-hero-icon-search {
+.landing-hero-icon-accent {
   position: absolute;
   width: 35%;
-  right: -5%;
-  bottom: -5%;
+  right: 8%;
+  bottom: 8%;
 }
 
 /* ------------------

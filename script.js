@@ -24,18 +24,14 @@ const discoveryForm = document.getElementById('discovery-form');
 if (discoveryForm) {
   discoveryForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const get = (id) => document.getElementById(id).value;
-    const subject = encodeURIComponent('🌍 Discovery call request — International SEO');
-    const body = encodeURIComponent(
-      `Name: ${get('discovery-name')}\n` +
-      `Email: ${get('discovery-email')}\n` +
-      `Company: ${get('discovery-company')}\n` +
-      `Website: ${get('discovery-website')}\n` +
-      `Current markets: ${get('discovery-current-markets')}\n` +
-      `Target markets: ${get('discovery-target-markets')}\n` +
-      `Timeline: ${get('discovery-timeline')}\n\n` +
-      `${get('discovery-challenge')}`
-    );
+    const lines = Array.from(discoveryForm.elements)
+      .filter((el) => el.name && el.type !== 'submit')
+      .map((el) => {
+        const label = discoveryForm.querySelector(`label[for="${el.id}"]`);
+        return `${label ? label.textContent : el.name}: ${el.value}`;
+      });
+    const subject = encodeURIComponent(discoveryForm.dataset.subject || 'Discovery call request');
+    const body = encodeURIComponent(lines.join('\n'));
     window.location.href = `mailto:arthurleaoroder@gmail.com?subject=${subject}&body=${body}`;
   });
 }
