@@ -29,6 +29,10 @@ p {
   text-wrap: pretty;
 }
 
+.center-aligned-paragraph {
+  text-align: center;
+}
+
 /* ------------------
    HERO
 ------------------ */
