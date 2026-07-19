@@ -8,10 +8,8 @@
 }
 
 :root {
-  --dark-cool: #fff;
-  --light-cool: #000;
-  --dark-warm: #ff6900; 
-  --light-warm: #fcb900; 
+  --dark-warm: #ff6900;
+  --light-warm: #fcb900;
 }
 
 body {
@@ -393,7 +391,8 @@ p.eyebrow-alt {
   font-weight: 500;
 }
 
-.solution-icon svg {
+.solution-icon svg,
+.contact-icon svg {
   width: 32px;
   height: 32px;
   color: #3b82f6;
@@ -503,6 +502,8 @@ p.services-closing {
 .thought-content p {
   color: #444;
   margin: 0;
+  text-align: inherit;
+  max-width: none;
 }
 
 /* ------------------
@@ -558,17 +559,22 @@ p.services-closing {
   color: #444;
 }
 
-.credibility-tags {
+.credibility-tags,
+.trait-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem 2rem;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
-.credibility-tags li {
+.credibility-tags {
+  justify-content: center;
+  gap: 1.5rem 2rem;
+  margin: 0;
+}
+
+.credibility-tags li,
+.trait-tags li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -577,11 +583,15 @@ p.services-closing {
   font-size: 0.95rem;
 }
 
+.credibility-tags svg,
+.trait-tags svg {
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
 .credibility-tags svg {
   width: 22px;
   height: 22px;
-  color: #3b82f6;
-  flex-shrink: 0;
 }
 
 .testimonials h3 {
@@ -603,34 +613,49 @@ p.services-closing {
   border-top: 1px solid rgba(13, 32, 88, 0.12);
 }
 
+.testimonial-mark,
+.landing-testimonial-mark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .testimonial-mark {
   position: absolute;
   top: 1.2rem;
   left: -0.5rem;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 4.5rem;
-  font-weight: 700;
-  line-height: 1;
   color: rgba(13, 32, 88, 0.12);
   user-select: none;
 }
 
-.testimonial .quote {
-  position: relative;
-  font-size: 1.2rem;
+.testimonial .quote,
+.landing-testimonial .quote {
   font-style: italic;
   color: #0D2058;
   margin: 0 0 0.75rem;
 }
 
-.testimonial figcaption a {
+.testimonial .quote {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.testimonial figcaption a,
+.landing-testimonial figcaption a,
+.profile-links-list a {
   color: #a04000;
   font-weight: 600;
-  font-size: 0.9rem;
   text-decoration: none;
 }
 
-.testimonial figcaption a:hover {
+.testimonial figcaption a {
+  font-size: 0.9rem;
+}
+
+.testimonial figcaption a:hover,
+.landing-testimonial figcaption a:hover,
+.profile-links-list a:hover {
   text-decoration: underline;
 }
 
@@ -654,16 +679,6 @@ p.services-closing {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 1rem;
-}
-
-.profile-links-list a {
-  color: #a04000;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.profile-links-list a:hover {
-  text-decoration: underline;
 }
 
 .profile-avatars {
@@ -763,28 +778,13 @@ p.services-closing {
 }
 
 .trait-tags {
-  display: flex;
-  flex-wrap: wrap;
   gap: 1.25rem 2rem;
-  list-style: none;
   margin: 2rem 0 0;
-  padding: 0;
-}
-
-.trait-tags li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #0D2058;
-  font-weight: 500;
-  font-size: 0.95rem;
 }
 
 .trait-tags svg {
   width: 20px;
   height: 20px;
-  color: #3b82f6;
-  flex-shrink: 0;
 }
 
 /* ------------------
@@ -810,14 +810,6 @@ p.services-closing {
   text-align: left;
 }
 
-.contact-icon svg {
-  width: 32px;
-  height: 32px;
-  color: #3b82f6;
-  margin-bottom: 0.75rem;
-  display: block;
-}
-
 .contact-option h3 {
   color: #0D2058;
   margin: 0 0 0.5rem;
@@ -836,7 +828,10 @@ p.services-closing {
 }
 
 .email-form input,
-.email-form textarea {
+.email-form textarea,
+.discovery-form input,
+.discovery-form select,
+.discovery-form textarea {
   font: inherit;
   padding: 0.6rem 0.8rem;
   border: 1px solid rgba(13, 32, 88, 0.25);
@@ -845,7 +840,10 @@ p.services-closing {
 }
 
 .email-form input:focus,
-.email-form textarea:focus {
+.email-form textarea:focus,
+.discovery-form input:focus,
+.discovery-form select:focus,
+.discovery-form textarea:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 1px;
   border-color: #3b82f6;
@@ -898,6 +896,8 @@ p.services-closing {
 
 .contact-photo-break p {
   text-align: center;
+  color: #444;
+  margin: 0;
 }
 
 .contact-photo-break img {
@@ -908,11 +908,6 @@ p.services-closing {
   border-radius: 20px;
   display: block;
   margin-bottom: 1rem;
-}
-
-.contact-photo-break p {
-  color: #444;
-  margin: 0;
 }
 
 /* ------------------
@@ -1035,20 +1030,10 @@ p.services-closing {
 
 .landing-testimonial .quote {
   font-size: 1rem;
-  font-style: italic;
-  color: #0D2058;
-  margin: 0 0 0.75rem;
 }
 
 .landing-testimonial figcaption a {
-  color: #a04000;
-  font-weight: 600;
   font-size: 0.85rem;
-  text-decoration: none;
-}
-
-.landing-testimonial figcaption a:hover {
-  text-decoration: underline;
 }
 
 /* ------------------
@@ -1079,20 +1064,7 @@ p.services-closing {
 .discovery-form select,
 .discovery-form textarea {
   width: 100%;
-  font: inherit;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid rgba(13, 32, 88, 0.25);
-  border-radius: 8px;
   background: #fff;
-  resize: vertical;
-}
-
-.discovery-form input:focus,
-.discovery-form select:focus,
-.discovery-form textarea:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 1px;
-  border-color: #3b82f6;
 }
 
 /* ------------------
