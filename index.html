@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/style.css">
   <link rel="preload" href="/img/abstract-network.avif" as="image" type="image/avif" fetchpriority="high">
-  <link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="/img/Arthur-091-480.avif 480w, /img/Arthur-091.avif 780w" imagesizes="(max-width: 768px) 330px, 520px">
+  <link rel="preload" href="/img/Arthur-091-gray.avif" as="image" type="image/avif" fetchpriority="high">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
@@ -55,7 +55,7 @@
         "@id": "https://arthurroder.com/#person",
         "name": "Arthur Roder",
         "url": "https://arthurroder.com/",
-        "image": "https://arthurroder.com/img/Arthur-091.png",
+        "image": "https://arthurroder.com/img/Arthur-091-gray.png",
         "jobTitle": "Search Engine Optimization Specialist",
         "description": "SEO specialist with 6+ years of experience in international SEO, e-commerce SEO, and data-driven content marketing.",
         "knowsAbout": ["Technical SEO", "International SEO", "E-commerce SEO", "Content Strategy", "Data Analytics", "Python Automation", "Generative Engine Optimization (GEO)"],
@@ -95,7 +95,7 @@
         "isPartOf": { "@id": "https://arthurroder.com/#website" },
         "about": { "@id": "https://arthurroder.com/#person" },
         "mainEntity": { "@id": "https://arthurroder.com/#person" },
-        "primaryImageOfPage": "https://arthurroder.com/img/Arthur-091.png",
+        "primaryImageOfPage": "https://arthurroder.com/img/Arthur-091-gray.png",
         "inLanguage": "en"
       }
     ]
@@ -151,13 +151,9 @@
 
   <div class="hero-portrait">
     <picture>
-      <source
-        type="image/avif"
-        srcset="/img/Arthur-091-480.avif 480w, /img/Arthur-091.avif 780w"
-        sizes="(max-width: 768px) 330px, 520px"
-      >
+      <source srcset="/img/Arthur-091-gray.avif" type="image/avif">
       <img
-        src="/img/Arthur-091.png"
+        src="/img/Arthur-091-gray.png"
         alt="Portrait of Arthur Roder, SEO specialist"
         width="780"
         height="1093"
