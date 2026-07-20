@@ -6,6 +6,11 @@
   <title>Privacy Policy – Arthur Roder</title>
   <meta name="description" content="Privacy policy for arthurroder.com — what information is collected through this site, how it's used, and how to get in touch about it.">
   <link rel="canonical" href="https://arthurroder.com/privacy-policy">
+  <link rel="alternate" hreflang="en" href="https://arthurroder.com/privacy-policy">
+  <link rel="alternate" hreflang="pt-BR" href="https://arthurroder.com/pt/politica-de-privacidade">
+  <link rel="alternate" hreflang="es" href="https://arthurroder.com/es/politica-de-privacidad">
+  <link rel="alternate" hreflang="fr" href="https://arthurroder.com/fr/politique-de-confidentialite">
+  <link rel="alternate" hreflang="x-default" href="https://arthurroder.com/privacy-policy">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Arthur Roder">
 
@@ -21,6 +26,9 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
 
   <!-- Icons -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -40,7 +48,7 @@
         "url": "https://arthurroder.com/",
         "name": "Arthur Roder",
         "publisher": { "@id": "https://arthurroder.com/#person" },
-        "inLanguage": "en"
+        "inLanguage": ["en", "pt-BR", "es", "fr"]
       },
       {
         "@type": "Person",
@@ -99,7 +107,15 @@
         </ul>
       </li>
       <li><a href="/about-me">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-dropdown-label" tabindex="0">EN</span>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/privacy-policy" hreflang="en" lang="en">English</a></li>
+          <li><a href="/pt/politica-de-privacidade" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+          <li><a href="/es/politica-de-privacidad" hreflang="es" lang="es">Español</a></li>
+          <li><a href="/fr/politique-de-confidentialite" hreflang="fr" lang="fr">Français</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>
@@ -135,7 +151,7 @@
 
 <footer class="footer">
   <p>© 2026 Arthur Roder</p>
-  <p><a href="/privacy-policy">Privacy Policy</a></p>
+  <p><a href="/privacy-policy">Privacy Policy</a> · <a href="/sitemap.xml">Sitemap</a></p>
 </footer>
 
 <script src="/script.js" defer></script>

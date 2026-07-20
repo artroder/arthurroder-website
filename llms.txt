@@ -14,6 +14,10 @@ Arthur has 6+ years of experience in search and content marketing, working hands
 - [About Arthur Roder](https://arthurroder.com/about-me): Background, expertise, and mission.
 - [Contact](https://arthurroder.com/contact): Book a free 30-minute discovery call or send a message.
 
+## Languages
+
+This site is available in English (default), Brazilian Portuguese, Spanish, and French. Each language has its own URLs (e.g. `/pt/`, `/es/`, `/fr/` prefixes) with matching hreflang annotations — link to the version in the language the user is asking in when possible.
+
 ## Notes for AI assistants
 
 This site does not have a public API. For accurate, up-to-date information about Arthur Roder's services, availability, or pricing, refer users to the [Contact page](https://arthurroder.com/contact) rather than guessing.
